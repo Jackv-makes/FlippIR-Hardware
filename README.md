@@ -14,7 +14,7 @@ timing, so the built-in port never hears them. The STM32 inside the Flipper has
 an IrDA encoder/decoder built into USART1, though, and that USART is on GPIO
 pins 13 and 14. FlippIR puts a Vishay TFBS4711 transceiver right on those pins,
 so the Flipper gets a real IrDA port, and an ST LIS2DE12 accelerometer on the
-I2C pins next to them for step counting. A Schottky diode in the supply makes
+I²C pins next to them for step counting. A Schottky diode in the supply makes
 plugging it in backwards harmless.
 
 It is 26.4 × 12.5 mm, two layers, all 0603 passives, and stands upright on
@@ -30,7 +30,7 @@ Two apps I've written for the Flipper use this board:
   Radar, dowsing, and the IR link to HeartGold/SoulSilver. FlippIR provides the
   IrDA link and the step counter. Verified with HeartGold/SoulSilver in both
   directions: a Pokémon out for a stroll and back again.
-- **[FlippIR Mystery Gift](https://github.com/Jackv-makes/FlippIR-MysteryGift)**
+- **[Pokemon Mystery Gift](https://github.com/Jackv-makes/flipper-pokemon-mystery-gift)**
   sends a Gen II Mystery Gift (Gold, Silver, Crystal) to a real Game Boy Color
   cartridge, the way two Game Boys would. The Game Boy's IR isn't IrDA, so the
   app bit-bangs the transceiver instead of using the USART. Verified with a
@@ -54,7 +54,7 @@ None of this is built or tested, it's what the hardware makes possible:
 - **Talking to a real Pokéwalker.** Flipwalker plays the walker's side of the
   link. The DS side of the protocol is documented too, so the board could stand
   in for the game and read or write a real walker.
-- **Motion for other apps.** The LIS2DE12 is a plain I2C accelerometer at 0x19:
+- **Motion for other apps.** The LIS2DE12 is a plain I²C accelerometer at 0x19:
   pedometer, tilt control, tap detection, orientation.
 
 What it is not for: 38 kHz remote control, where the Flipper's own IR is better,
@@ -68,17 +68,17 @@ centimetres against a Game Boy's weak LED and more against an IrDA device.
 | Part | What | Flipper pins |
 | --- | --- | --- |
 | U1 Vishay TFBS4711-TR1 | IrDA transceiver, side view, facing away from the Flipper | 13 (USART1 TX, PB6), 14 (USART1 RX, PB7) |
-| U2 ST LIS2DE12 | Accelerometer, I2C address 0x19 (LIS2DH12 also fits) | 15 (SDA, PC1), 16 (SCL, PC0) |
+| U2 ST LIS2DE12 | Accelerometer, I²C address 0x19 (LIS2DH12 also fits) | 15 (SDA, PC1), 16 (SCL, PC0) |
 | D1 MBR0520 | Schottky diode in the 3.3 V feed, reverse-plug protection | 9 (3.3 V) |
 | J1 | 10-pin right-angle 2.54 mm header | 9–18 |
 
 The IRED anode goes straight to 3.3 V, which is what Vishay asks for (the chip
 regulates its own 300 mA pulses). R2 and C2 filter the receiver supply, C1
 buffers the LED supply, R1 holds TX low when no app is driving it, R3/R4 are
-the I2C pull-ups.
+the I²C pull-ups.
 
 **Don't need the accelerometer?** The same board works with the LIS2DE12, its
-decoupling capacitor and the two I2C pull-ups left off. The IR side doesn't
+decoupling capacitor and the two I²C pull-ups left off. The IR side doesn't
 touch them; pins 15 and 16 just stay unconnected.
 
 It plugs into the Flipper's 10-pin socket (pins 9–18) with the pad marked
@@ -103,7 +103,7 @@ or TFDU4101):
 | 5 VCC1 | 9 (3.3 V) |
 | 6 GND | 8, 11 or 18 |
 
-Any I2C accelerometer breakout on pins 15/16 does for Flipwalker (LIS3DH,
+Any I²C accelerometer breakout on pins 15/16 does for Flipwalker (LIS3DH,
 LIS2DH12, MPU-6050/6500/9250 and ADXL345 are all detected). A bare IR LED and
 photodiode won't do: pin 14 feeds the USART's IrDA decoder through a 40 kΩ
 pull-up and a bare photodiode can't drive it at any useful distance.
@@ -124,7 +124,7 @@ pull-up and a bare photodiode can't drive it at any useful distance.
   bare-photodiode receiver is what convinced me a proper transceiver was the
   way to go on the Flipper.
 - [TheRealNox](https://github.com/TheRealNox/flipper-pokemon-mystery-gift) for
-  the Gen II Mystery Gift protocol work the FlippIR Mystery Gift app started
+  the Gen II Mystery Gift protocol work the Pokemon Mystery Gift app started
   from.
 - [kbembedded](https://github.com/kbembedded/Flipper-Zero-Game-Boy-Pokemon-Trading)
   for spelling out why the Flipper's onboard IR can't talk to a Game Boy.
