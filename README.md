@@ -87,7 +87,8 @@ sockets. It fits either way round; D1 makes the wrong way harmless, the board
 just doesn't power up.
 
 ![Top](images/top.png)
-![Back, with every pin labelled](images/bottom.png)
+![Back, with every pin labelled](images/back.png)
+![Back, angled](images/angle-back.png)
 
 ### Hand wiring instead
 
