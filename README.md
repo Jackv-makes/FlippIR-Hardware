@@ -24,7 +24,7 @@ pins 9–18. I have JLCPCB assemble the top side and solder the header myself.
 
 I am not an electrical engineer, this is a hobby project and there are
 probably rough edges. The board plugs straight onto the Flipper's GPIO header
-and runs off its 3.3 V pin, so if you build one, check the part orientation and
+and runs off its 3.3 V pin check the part orientation and
 the **9 / 3V3** marking before you plug it in. The diode only covers plugging it
 in backwards, it does nothing for a bad solder joint or a part the wrong way
 round. If something lets the smoke out of your Flipper, that is on you. I've
