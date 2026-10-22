@@ -121,4 +121,3 @@ pull-up and a bare photodiode can't drive it at any useful distance.
 - [kbembedded](https://github.com/kbembedded/Flipper-Zero-Game-Boy-Pokemon-Trading)
   for spelling out why the Flipper's onboard IR can't talk to a Game Boy.
 - Vishay's TFBS4711 datasheet for the reference circuit.
-- Designed with Claude.
