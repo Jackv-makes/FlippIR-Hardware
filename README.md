@@ -30,7 +30,7 @@ Two apps I've written for the Flipper use this board:
   Radar, dowsing, and the IR link to HeartGold/SoulSilver. FlippIR provides the
   IrDA link and the step counter. Verified with HeartGold/SoulSilver in both
   directions: a Pokémon out for a stroll and back again.
-- **[Pokemon Mystery Gift][Soon to be released]**
+- **[FlipGift](https://github.com/Jackv-makes/FlipGift)**
   sends a Gen II Mystery Gift (Gold, Silver, Crystal) to a real Game Boy Color
   cartridge, the way two Game Boys would. The Game Boy's IR isn't IrDA, so the
   app bit-bangs the transceiver instead of using the USART. Verified with a
