@@ -20,6 +20,21 @@ plugging it in backwards harmless.
 It is 26.4 × 12.5 mm, two layers, all 0603 passives, and stands upright on
 pins 9–18. I have JLCPCB assemble the top side and solder the header myself.
 
+## Disclaimer
+
+I am not an electrical engineer, this is a hobby project and there are
+probably rough edges. The board plugs straight onto the Flipper's GPIO header
+and runs off its 3.3 V pin, so if you build one, check the part orientation and
+the **9 / 3V3** marking before you plug it in. The diode only covers plugging it
+in backwards, it does nothing for a bad solder joint or a part the wrong way
+round. If something lets the smoke out of your Flipper, that is on you. I've
+only tested it on my own Flipper, with the two apps below, against my own carts
+and DS.
+
+The documentation here was written with help from AI. I've gone over it, but
+if something in the text doesn't match the board or the datasheets, trust the
+board and the datasheets and let me know.
+
 ## What runs on it
 
 Two apps I've written for the Flipper use this board:
@@ -45,7 +60,7 @@ None of this is built or tested, it's what the hardware makes possible:
 
 - **Other Game Boy Color IR games.** Pokémon Trading Card Game 2, Super Mario
   Bros. Deluxe, Mission: Impossible, Perfect Dark, Robopon and a handful of
-  others use the same raw IR port as Gen II Pokémon. The Mystery Gift app shows
+  others use the same raw IR port as Gen II Pokémon. FlipGift shows
   the transceiver can be driven that way (marks as chains of 20 µs pulses,
   receive by edge timing); each game's protocol would still need working out.
 - **A real IrDA port.** USART1's IrDA mode does SIR at up to 115.2 kbit/s, which
@@ -116,8 +131,7 @@ pull-up and a bare photodiode can't drive it at any useful distance.
   bare-photodiode receiver is what convinced me a proper transceiver was the
   way to go on the Flipper.
 - [TheRealNox](https://github.com/TheRealNox/flipper-pokemon-mystery-gift) for
-  the Gen II Mystery Gift protocol work the Pokemon Mystery Gift app started
-  from.
+  the Gen II Mystery Gift protocol work FlipGift started from.
 - [kbembedded](https://github.com/kbembedded/Flipper-Zero-Game-Boy-Pokemon-Trading)
   for spelling out why the Flipper's onboard IR can't talk to a Game Boy.
 - Vishay's TFBS4711 datasheet for the reference circuit.
