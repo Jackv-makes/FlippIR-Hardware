@@ -7,6 +7,6 @@ Item,Designator,Qty,Manufacturer,Manufacturer Part Number,Description,Package,Mo
 6,R1,1,Yageo,RC0603FR-07100KL,100 kOhm 1% resistor,0603,SMD,C25803,RC0603FR-07100KL,TX pull-down
 7,R2,1,Yageo,RC0603FR-0747RL,47 Ohm 1% resistor,0603,SMD,C23182,RC0603FR-0747RL,
 8,J1,1,Sullins,PRPC010SBAN-M71RC,1x10 2.54 mm right-angle pin header,2.54 mm 1x10 horizontal,"THT, hand solder",,S1112EC-10-ND,Plugs into Flipper GPIO pins 9-18
-9,U2,1,STMicroelectronics,LIS2DE12TR,"Accelerometer, I2C 0x19 (LIS2DH12 also fits). ACCELEROMETER GROUP: leave off for an IR-only board",LGA-12 2x2 mm,SMD,,497-15184-1-ND,Optional If you don't ant Accelerometer
-10,C3,1,Yageo,CC0603KRX7R9BB104,"100 nF 50 V X7R capacitor, U2 decoupling. ACCELEROMETER GROUP",0603,SMD,C14663,CC0603KRX7R9BB104,Optional If you don't ant Accelerometer
-11,"R3, R4",2,Yageo,RC0603FR-074K7L,"4.7 kOhm 1% resistor, I2C pull-ups. ACCELEROMETER GROUP",0603,SMD,C23162,RC0603FR-074K7L,Optional If you don't ant Accelerometer
+9,U2,1,STMicroelectronics,LIS2DE12TR,"Accelerometer, I2C 0x19 (LIS2DH12 also fits). ACCELEROMETER GROUP: leave off for an IR-only board",LGA-12 2x2 mm,SMD,,497-15184-1-ND,Optional If you don't want Accelerometer
+10,C3,1,Yageo,CC0603KRX7R9BB104,"100 nF 50 V X7R capacitor, U2 decoupling. ACCELEROMETER GROUP",0603,SMD,C14663,CC0603KRX7R9BB104,Optional If you don't want Accelerometer
+11,"R3, R4",2,Yageo,RC0603FR-074K7L,"4.7 kOhm 1% resistor, I2C pull-ups. ACCELEROMETER GROUP",0603,SMD,C23162,RC0603FR-074K7L,Optional If you don't want Accelerometer
