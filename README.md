@@ -20,11 +20,18 @@ plugging it in backwards harmless.
 It is 26.4 × 12.5 mm, two layers, all 0603 passives, and stands upright on
 pins 9–18. I have JLCPCB assemble the top side and solder the header myself.
 
+## Get the board
+
+FlippIR is shared on PCBWay as a shared project: _add the PCBWay project
+link here_. Ordering from there gets you the bare boards; the parts list is
+in the project and in the table below. It is shared for personal use only,
+see [License](#license).
+
 ## Disclaimer
 
 I am not an electrical engineer, this is a hobby project and there are
 probably rough edges. The board plugs straight onto the Flipper's GPIO header
-and runs off its 3.3 V pin check the part orientation and
+and runs off its 3.3 V pin, so if you build one, check the part orientation and
 the **9 / 3V3** marking before you plug it in. The diode only covers plugging it
 in backwards, it does nothing for a bad solder joint or a part the wrong way
 round. If something lets the smoke out of your Flipper, that is on you. I've
@@ -123,6 +130,18 @@ Any I2C accelerometer breakout on pins 15/16 does for Flipwalker (LIS3DH,
 LIS2DH12, MPU-6050/6500/9250 and ADXL345 are all detected). A bare IR LED and
 photodiode won't do: pin 14 feeds the USART's IrDA decoder through a 40 kΩ
 pull-up and a bare photodiode can't drive it at any useful distance.
+
+## License
+
+The FlippIR board design is shared under the
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+license (CC BY-NC-SA 4.0). That means you can build it for yourself, modify
+it and share what you make, as long as you credit FlippIR and share under the
+same terms. You can't sell it: no boards, no kits, no assembled units, no
+products that include it. Ordering a few from PCBWay for yourself and your
+friends is fine; a shop listing is not.
+
+The two apps have their own licenses in their own repos.
 
 ## Credits
 
