@@ -22,7 +22,7 @@ pins 9–18. I have JLCPCB assemble the top side and solder the header myself.
 
 ## Get the board
 
-FlippIR is shared on PCBWay as a shared project: [FlippIR PCBWay](https://www.pcbway.com/project/shareproject/FlippIR_IrDA_and_Accelerometer_board_for_the_Flipper_Zero_ae502532.html). Ordering from there gets you the bare boards; the parts list is
+FlippIR is shared on PCBWay as a shared project: [FlippIR PCBWay](https://www.pcbway.com/project/shareproject/FlippIR_IrDA_and_Accelerometer_board_for_the_Flipper_Zero_ae502532.html). Ordering from there gets you the bare boards unless you choose PCBA; the parts list is
 in the project and in the table below. It is shared for personal use only,
 see [License](#license).
 
@@ -58,7 +58,6 @@ Two apps I've written for the Flipper use this board:
   retail US Pokémon Gold cart: items, decorations, and reading back the trainer
   data the cart sends in return. The accelerometer isn't used.
 
-Both apps run on this board unchanged, in any revision from v0.6 up.
 
 ## What else it could do
 
