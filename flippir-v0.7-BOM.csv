@@ -1,0 +1,12 @@
+Item,Designator,Qty,Manufacturer,Manufacturer Part Number,Description,Package,Mounting,LCSC Part,Digi-Key Part,Notes
+1,U1,1,Vishay,TFBS4711-TR1,"IrDA transceiver, side view",TFBS4711 side-view (6 pads),SMD,C102624,TFBS4711-TR1,Lenses face away from the Flipper
+2,D1,1,onsemi,MBR0520LT1G,"Schottky diode 20 V 0.5 A, reverse-plug protection",SOD-123,SMD,,MBR0520LT1GOSCT-ND,
+3,C1,1,Yageo,CC0603KRX5R7BB475,4.7 uF 16 V X5R capacitor,0603,SMD,C19666,CC0603KRX5R7BB475,IR LED supply buffer
+4,C2,1,Yageo,CC0603KRX7R9BB104,100 nF 50 V X7R capacitor,0603,SMD,C14663,CC0603KRX7R9BB104,Receiver supply filter
+5,C4,1,Taiyo Yuden,LMK107BJ106MALTD,10 uF 10 V X5R capacitor,0603,SMD,C19702,LMK107BJ106MALTD,Supply buffer after D1
+6,R1,1,Yageo,RC0603FR-07100KL,100 kOhm 1% resistor,0603,SMD,C25803,RC0603FR-07100KL,TX pull-down
+7,R2,1,Yageo,RC0603FR-0747RL,47 Ohm 1% resistor,0603,SMD,C23182,RC0603FR-0747RL,
+8,J1,1,Sullins,PRPC010SBAN-M71RC,1x10 2.54 mm right-angle pin header,2.54 mm 1x10 horizontal,"THT, hand solder",,S1112EC-10-ND,Plugs into Flipper GPIO pins 9-18
+9,U2,1,STMicroelectronics,LIS2DE12TR,"Accelerometer, I2C 0x19 (LIS2DH12 also fits). ACCELEROMETER GROUP: leave off for an IR-only board",LGA-12 2x2 mm,SMD,,497-15184-1-ND,Optional
+10,C3,1,Yageo,CC0603KRX7R9BB104,"100 nF 50 V X7R capacitor, U2 decoupling. ACCELEROMETER GROUP",0603,SMD,C14663,CC0603KRX7R9BB104,Optional
+11,"R3, R4",2,Yageo,RC0603FR-074K7L,"4.7 kOhm 1% resistor, I2C pull-ups. ACCELEROMETER GROUP",0603,SMD,C23162,RC0603FR-074K7L,Optional
