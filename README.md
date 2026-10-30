@@ -23,7 +23,7 @@ pins 9–18. I have JLCPCB assemble the top side and solder the header myself.
 ## Get the board
 
 FlippIR is shared on PCBWay as a shared project: [FlippIR PCBWay](https://www.pcbway.com/project/shareproject/FlippIR_IrDA_and_Accelerometer_board_for_the_Flipper_Zero_ae502532.html). Ordering from there gets you the bare boards unless you choose PCBA; the parts list is
-in the project and in the table below. It is shared for personal use only,
+in the project and in the table below and in the [BOM file](https://github.com/Jackv-makes/FlippIR-Hardware/blob/main/flippir-v0.7-BOM.csv). It is shared for personal use only,
 see [License](#license).
 
 ## Disclaimer
